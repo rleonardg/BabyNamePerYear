@@ -30,12 +30,12 @@ def how_many_names_by_year(data, n, sex):
     df_final = pd.concat(x, axis=1)
     df_final = df_final.reset_index()
 
-    #print(df_final)
+    # print(df_final)
     df_final.to_csv('baby_names_result.csv')
 
     
 
 
 if __name__ == '__main__':
-     data = pd.read_csv("data/baby_girl_names.csv") 
-     how_many_names_by_year(data, 10, 'F')
+     # data = pd.read_csv("data/baby_girl_names.csv") 
+     # how_many_names_by_year(data, 10, 'F')
