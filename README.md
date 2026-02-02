@@ -19,11 +19,13 @@ python3 HowManyNamesByYear "csv_baby_names__path.csv" 100 'F'
 
 ### 01. Wide Format
 Wide format is the default format of baby_names_result.csv. This format works with tools such as Flourish. You can see the dinamic graphic in flourish [here](https://public.flourish.studio/visualisation/27433129/)
-<img src="https://github.com/rleonardg/BabyNamePerYear/assets/flourish_dynamic_bar_image.png">
+
+<img src="https://github.com/rleonardg/BabyNamePerYear/blob/main/assets/flourish_dynamic_bar_image.png">
 
 ### 02. Long Format
-The Long Format is the common format for tools such as Power BI and tableau. Can be obtain by ['unpivot columns'](https://support.microsoft.com/en-us/office/unpivot-columns-power-query-0f7bad4b-9ea1-49c1-9d95-f588221c7098) excel option.
+The Long Format is the common format for tools such as Power BI and tableau. Can be obtain by ['unpivot columns'](https://support.microsoft.com/en-us/office/unpivot-columns-power-query-0f7bad4b-9ea1-49c1-9d95-f588221c7098) excel option. You can see the public tableau dashboard [here](https://public.tableau.com/app/profile/ra.l.leonardo.gabriel/viz/145-Years-Baby-Girl-Evolution/Dashboard1)
 
+<img src="https://github.com/rleonardg/BabyNamePerYear/blob/main/assets/tableau_dashboard_image.png">
 
 ## Resources
 - [SSA](https://www.ssa.gov/oact/babynames/)
