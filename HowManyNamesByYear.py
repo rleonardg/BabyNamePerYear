@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import sys
 
 def how_many_names_by_year(data, n, sex):
     # create a empty list to store DataFrames 
@@ -30,12 +31,23 @@ def how_many_names_by_year(data, n, sex):
     df_final = pd.concat(x, axis=1)
     df_final = df_final.reset_index()
 
-    # print(df_final)
-    df_final.to_csv('baby_names_result.csv')
+    print(df_final)
+    #df_final.to_csv('baby_names_result.csv')
 
     
 
 
 if __name__ == '__main__':
-     # data = pd.read_csv("data/baby_girl_names.csv") 
-     # how_many_names_by_year(data, 10, 'F')
+    try:
+        file_path, n, sex = sys.argv[1], sys.argv[2], sys.argv[3]
+        if len(sys.argv) != 4:
+            raise ValueError("Three arguments must be passed (file_path, n, sex)")
+        if sex not in ['M', 'F']:
+            raise ValueError("Argument sex has to be 'F' or 'M'")
+        if not n.isdigit():
+            raise TypeError("n argument has to be a number")
+
+        data = pd.read_csv(file_path) 
+        how_many_names_by_year(data, int(n), sex)
+    except (ValueError, TypeError, FileNotFoundError) as e:
+        print(f"{e}")
